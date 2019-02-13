@@ -9,8 +9,8 @@ class TDSlibrary:
 
     def fetch_testdata(self, tablename):
         uri = 'http://' + self.host + ':' + str(self.port) + '/api/v1/testdata/' + tablename
-        r = requests.get(uri)
-        BuiltIn().log(r.content)
+        data = requests.get(uri).json()
+        BuiltIn().log(data)
 
     def add_dataset(self):
         pass
