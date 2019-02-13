@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '0.0.9.pre'
+version = '0.0.10.pre'
 
 setup(name="robotframework-testdataserverlibrary",
       version=version,
@@ -9,7 +9,7 @@ setup(name="robotframework-testdataserverlibrary",
       author="SALabs",
       author_email="to.be.added@noexist89a887.org",
       url="https://github.com/Omenia/robotframework-testdataserverlibrary",
-      install_requires=['requests', 'robotframework'],
+      install_requires=['requests', 'robotframework', 'json'],
       py_modules=['TDSlibrary'],
       classifiers=["Programming Language :: Python :: 2",
                    "Programming Language :: Python :: 2.7",
