@@ -1,4 +1,4 @@
-VERSION = '0.0.8.pre'
+VERSION = 'X.X.X.pre'
 STABLE = False
 
 if __name__ == '__main__':
