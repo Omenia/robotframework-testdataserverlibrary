@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 version_data = {}
 with open(os.path.join("version.py")) as f:
@@ -33,7 +33,7 @@ setup(name="robotframework-whitelibrary",
       url="https://github.com/Omenia/robotframework-testdataserverlibrary",
       install_requires=requirements,
       # packages=find_packages("src", exclude=["tests"]),
-      packages=['TDSlibrary'],
+      packages=find_packages(),
       package_dir={"TDSlibrary": "TDSlibrary"},
       classifiers=["Programming Language :: Python :: 2",
                    "Programming Language :: Python :: 2.7",
