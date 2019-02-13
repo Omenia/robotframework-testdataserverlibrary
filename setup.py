@@ -33,7 +33,7 @@ setup(name="robotframework-whitelibrary",
       url="https://github.com/Omenia/robotframework-testdataserverlibrary",
       install_requires=requirements,
       # packages=find_packages("src", exclude=["tests"]),
-      packages=
+      packages=['TDSlibrary'],
       package_dir={"TDSlibrary": "TDSlibrary"},
       classifiers=["Programming Language :: Python :: 2",
                    "Programming Language :: Python :: 2.7",
