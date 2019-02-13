@@ -19,7 +19,6 @@ payload:
 # Usage Example #
 
 *** Settings ****
-# Library    TDSlibrary    host=<testdataserverip>    port<testdataserverport>
 Library    TDSlibrary    host=172.16.240.185    port=5000
 
 *** Test Cases ***
