@@ -9,7 +9,7 @@ setup(name="robotframework-testdataserverlibrary",
       author="SALabs",
       author_email="to.be.added@noexist89a887.org",
       url="https://github.com/Omenia/robotframework-testdataserverlibrary",
-      install_requires=['requests==2.21.0', 'robotframework==3.1']
+      install_requires=['requests==2.21.0', 'robotframework==3.1'],
       py_modules=['TDSlibrary'],
       classifiers=["Programming Language :: Python :: 2",
                    "Programming Language :: Python :: 2.7",
