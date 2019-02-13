@@ -5,7 +5,7 @@ requirements = []
 with open("requirements.txt", "r") as f:
     requirements = list(filter(lambda s: s!="", f.read().split("\n")))
 
-version = 0.0.4
+version = '0.0.4'
 
 setup(name="robotframework-testdataserverlibrary",
       version=version,
