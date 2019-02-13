@@ -53,3 +53,22 @@ jobs:
       #- store_artifacts:
       #    path: test-reports
       #    destination: test-reports
+
+      - run:
+          name: init .pypirc
+          command: |
+            echo -e "[pypi]" >> ~/.pypirc
+            echo -e "username = JuhaAlhonen" >> ~/.pypirc
+            echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
+
+      - run:
+          name: create packages
+          command: |
+            python setup.py sdist
+            python setup.py bdist_wheel
+
+      - run:
+          name: upload to pypi
+          command: |
+            . venv/bin/activate
+            twine upload --repository-url https://test.pypi.org/legacy/ dist/*
