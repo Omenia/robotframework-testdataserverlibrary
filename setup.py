@@ -25,7 +25,7 @@ if version_data["STABLE"]:
 else:
     version = "{}.{}.pre".format(version_data["VERSION"], build)
 
-setup(name="robotframework-whitelibrary",
+setup(name="robotframework-testdataserverlibrary",
       version=version,
       description="Test Data Server library for Robot Framework",
       author="SALabs",
