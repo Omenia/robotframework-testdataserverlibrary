@@ -5,9 +5,14 @@ pip install --force-reinstall --index-url https://test.pypi.org/simple --extra-i
 
 # Preconditions 
 ## TestDataServer installed:
+
+Library itself does nothing! You need also a TestDataServer which provides test data via an API. See more:
+
 https://github.com/Omenia/TestDataServer
 
 ## Example data inserted to database
+After clean installation TestDataServer has empty testdata database. For this demo we can add some simple test data which we can use for this demo.
+
 Go to http://\<testdataserverip\>:5000/configuration
 --> Click "Add testdata"
 
