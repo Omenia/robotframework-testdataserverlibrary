@@ -45,9 +45,13 @@ jobs:
             git clone git@github.com:Omenia/TestDataServer.git
 
       - run:
-          name: Dcker stuff for TDS server
+          name: Docker magic#1
           command: |
             docker build -t testdataserver .
+
+      - run:
+          name: Docker magic#2
+          command: |
             docker run -d -v db:/db -p 80:8000 testdataserver
 
       # run tests!
