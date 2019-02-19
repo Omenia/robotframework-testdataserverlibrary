@@ -11,7 +11,7 @@ services:
     depends_on:
       - testdataserver
     environment:
-      BASE_URL: http://testdataserver:8000
-      ROBOT_OPTIONS: ""
+      TDS_HOST: localhost
+      TDS_PORT: 80
     volumes:
       - ./atest/output:/atest/output

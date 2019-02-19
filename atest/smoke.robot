@@ -1,5 +1,6 @@
 *** Settings ****
-Library    TDSlibrary    host=172.16.240.234    port=5000
+Resource    TDSvariables.robot
+Library    TDSlibrary    host=${tds_host}    port=${tds_port}
 # Resource    TdsKeywords.robot
 # Suite Setup    Prepare Testdata
 # Suite Teardown    Remove Testdata
