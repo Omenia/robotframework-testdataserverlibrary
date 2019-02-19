@@ -59,7 +59,7 @@ jobs:
       - run:
           namen: Test API
           command: |
-            curl localhost:5000/ui/
+            curl http://localhost
 
       # run tests!
       # this example uses Django's built-in test-runner
