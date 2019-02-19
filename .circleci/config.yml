@@ -44,6 +44,8 @@ jobs:
           command: |
             git clone git@github.com:Omenia/TestDataServer.git
 
+      - setup_remote_docker:
+
       - run:
           name: Docker magic#1
           command: |
