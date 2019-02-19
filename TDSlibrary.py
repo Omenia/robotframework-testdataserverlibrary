@@ -35,8 +35,9 @@ class TDSlibrary:
         }
         requests.post(uri, headers = req_headers, data = json.dumps(req_body))
 
-    def remove_dataset(self):
-        pass
+    def remove_dataset(self, setname):
+        uri = 'http://' + self.host + ':' + str(self.port) + '/api/v1/testdata/' + setname
+        requests.delete(uri, data = setname)
 
     def add_data_to_dataset(self):
         pass
