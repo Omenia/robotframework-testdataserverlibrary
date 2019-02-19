@@ -65,7 +65,7 @@ jobs:
       - run:
           name: Docker run Libarry part
           command: |
-            docker run -d -v db:/db -p 80:8000 robotlibrary
+            docker run -d robotlibrary
 
       # - run:
       #     namen: Test API
