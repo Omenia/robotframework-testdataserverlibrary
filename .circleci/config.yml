@@ -43,6 +43,13 @@ jobs:
           name: Checkout TDS server code
           command: |
             git clone git@github.com:Omenia/TestDataServer.git
+
+      - run:
+          name: Dcker stuff for TDS server
+          command: |
+            docker build -t testdataserver .
+            docker run -d -v db:/db -p 80:8000 testdataserver
+
       # run tests!
       # this example uses Django's built-in test-runner
       # other common Python testing frameworks include pytest and nose
