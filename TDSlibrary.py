@@ -21,8 +21,19 @@ class TDSlibrary:
             value = my_dict[item]
             BuiltIn().set_global_variable(key, value)
 
-    def add_dataset(self):
-        pass
+    def add_dataset(self, setname):
+        uri = 'http://' + self.host + ':' + str(self.port) + '/api/v1/testdata'
+        req_headers = {'Content-Type': 'application/json'}
+        testdataitem1 = {'username':'user1', 'password': 'password1', 'email': 'user1@nowhere.com'}
+        testdataitem2 = {'username':'user2', 'password': 'password2', 'email': 'user2@nowhere.com'}
+        req_body = {
+            "dataset": setname,
+            "items": [
+                testdataitem1,
+                testdataitem2,
+            ]
+        }
+        requests.post(uri, headers = req_headers, data = json.dumps(req_body))
 
     def remove_dataset(self):
         pass
