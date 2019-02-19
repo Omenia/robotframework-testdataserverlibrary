@@ -1,10 +1,6 @@
 FROM    python:3.7.2-stretch
 
-COPY    . /
-
-WORKDIR /
-
-RUN     pip3 install -r requirements.txt
+COPY    . /atest
 
 WORKDIR /atest
 
