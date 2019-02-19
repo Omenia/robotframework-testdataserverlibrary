@@ -65,8 +65,9 @@ jobs:
       - run:
           name: Docker run Libarry part
           command: |
-            docker run -d robotlibrary
-
+            docker run --network -d container:testdataserver robotlibrary
+            curl http://localhost
+            
       # - run:
       #     namen: Test API
       #     command: |
