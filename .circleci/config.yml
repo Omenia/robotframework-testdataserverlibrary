@@ -47,19 +47,30 @@ jobs:
       - setup_remote_docker:
 
       - run:
-          name: Docker magic#1
+          name: Docker build TDS part
           command: |
             cd TestDataServer
             docker build -t testdataserver .
+
       - run:
-          name: Docker magic#2
+          name: Docker build Library part
+          command: |
+            docker build -t robotlibrary .
+
+      - run:
+          name: Docker run TDS part
           command: |
             docker run -d -v db:/db -p 80:8000 testdataserver
 
       - run:
-          namen: Test API
+          name: Docker run Libarry part
           command: |
-            curl http://localhost
+            docker run -d -v db:/db -p 80:8000 robotlibrary
+
+      # - run:
+      #     namen: Test API
+      #     command: |
+      #       curl http://localhost
 
       # run tests!
       # this example uses Django's built-in test-runner
