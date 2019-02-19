@@ -55,7 +55,7 @@ jobs:
       - run:
           name: Docker magic#2
           command: |
-            docker run -d -v db:/db -p 80:8000 TestDataServer/testdataserver
+            docker run -d -v db:/db -p 80:8000 testdataserver
 
       # run tests!
       # this example uses Django's built-in test-runner
