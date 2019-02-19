@@ -47,27 +47,20 @@ jobs:
       - setup_remote_docker:
 
       - run:
-          name: Docker build TDS part
+          name: Docker TDS part
           command: |
             cd TestDataServer
             docker build -t testdataserver .
+            docker run -d -v db:/db -p 80:8000 testdataserver
+            curl http://localhost
 
       - run:
-          name: Docker build Library part
+          name: Docker Library part
           command: |
             docker build -t robotlibrary .
-
-      - run:
-          name: Docker run TDS part
-          command: |
-            docker run -d -v db:/db -p 80:8000 testdataserver
-
-      - run:
-          name: Docker run Libarry part
-          command: |
             docker run --network -d container:testdataserver robotlibrary
             curl http://localhost
-            
+
       # - run:
       #     namen: Test API
       #     command: |
