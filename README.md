@@ -26,27 +26,27 @@ payload:
 
 # Usage Example #
 
-*** Settings ****
-Library        TDSlibrary    host=172.16.240.247    port=5000
-Suite Setup    Remove Dataset    credentials
+    *** Settings ****
+    Library        TDSlibrary    host=172.16.240.247    port=5000
+    Suite Setup    Remove Dataset    credentials
 
-*** Test Cases ***
-1. Add dataset works
-    Add Dataset       credentials
+    *** Test Cases ***
+    1. Add dataset works
+        Add Dataset       credentials
 
-2. Fetching data from dataset works
-    Fetch Testdata    credentials
-    Should Be Equal     ${username}    user1
+    2. Fetching data from dataset works
+        Fetch Testdata    credentials
+        Should Be Equal     ${username}    user1
 
-3. Popping testdata works
-    Fetch Testdata    credentials
-    Should Be Equal     ${username}    user2
+    3. Popping testdata works
+        Fetch Testdata    credentials
+        Should Be Equal     ${username}    user2
 
-4. Circulating testdata works
-    Fetch Testdata    credentials
-    Fetch Testdata    credentials
-    Should Be Equal     ${username}    user1
+    4. Circulating testdata works
+        Fetch Testdata    credentials
+        Fetch Testdata    credentials
+        Should Be Equal     ${username}    user1
 
-5. Removing dataset works
-    Remove Dataset    credentials
-    Run Keyword And Expect Error    KeyError: 'testdata'    Fetch Testdata    credentials
+    5. Removing dataset works
+        Remove Dataset    credentials
+        Run Keyword And Expect Error    KeyError: 'testdata'    Fetch Testdata    credentials
